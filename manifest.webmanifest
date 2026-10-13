@@ -1,0 +1,17 @@
+{
+  "name": "リウマチ専門医 4択",
+  "short_name": "リウマチ4択",
+  "description": "リウマチ専門医試験と臨床のための4択問題集（ガイドライン・薬の副作用と対策）",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f4ee",
+  "theme_color": "#2c5d8a",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
