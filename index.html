@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>リウマチ専門医 4択</title>
-<meta name="theme-color" content="#2c5d8a">
+<meta name="theme-color" content="#7a3b6e">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="リウマチ4択">
@@ -439,7 +439,7 @@ details.more[open]>summary{margin-bottom:8px}
 .jbox .sets{display:flex;flex-direction:column;gap:6px}
 .tower .fl0 span{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 4px;font-weight:700}
 
-:root{--k0:#2c5d8a;--k1:#2c5d8a;--k2:#b0405a;--k3:#a5661a;--k4:#3f6e3a;--k5:#7a4f8f;--k6:#1f6b5c;--k7:#8a5a3c;--k8:#5b5f1e;--k9:#c2552e;--k10:#3b3a8c;--k11:#9a3d78;--k12:#2f6f7e;--k13:#6b4f2a;--k14:#1d5f8a;--acc:#2c5d8a;--acc-soft:#f3e6ef;--grid:rgba(122,59,110,.06);--hema:#3b3a8c;--eosin:#c22e6b;--ok:#1f7a4d;--ng:#c2410c;--surface:#fff;--sunken:#f1eef4;}
+:root{--k0:#7a3b6e;--k1:#2c5d8a;--k2:#b0405a;--k3:#a5661a;--k4:#3f6e3a;--k5:#7a4f8f;--k6:#1f6b5c;--k7:#8a5a3c;--k8:#5b5f1e;--k9:#c2552e;--k10:#3b3a8c;--k11:#9a3d78;--k12:#2f6f7e;--k13:#6b4f2a;--k14:#1d5f8a;--acc:#7a3b6e;--acc-soft:#f3e6ef;--grid:rgba(122,59,110,.06);--hema:#3b3a8c;--eosin:#c22e6b;--ok:#1f7a4d;--ng:#c2410c;--surface:#fff;--sunken:#f1eef4;}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--k0:#e0a3d4;--k1:#82b2df;--k2:#ec8ea3;--k3:#e3a75c;--k4:#9fd08f;--k5:#c59ed8;--k6:#7cc7b3;--k7:#d9a27e;--k8:#cfd27a;--k9:#f29a77;--k10:#a9a7ff;--k11:#e89ccd;--k12:#7ecbdb;--k13:#d6b98c;--k14:#8cc4ec;--acc:#e0a3d4;--acc-soft:#33202e;--grid:rgba(224,163,212,.06);--hema:#a9a7ff;--eosin:#ff86b2;--ok:#6fd3a0;--ng:#ff9466;--surface:#1a2221;--sunken:#222a2a;}}
 :root[data-theme="dark"]{--k0:#e0a3d4;--k1:#82b2df;--k2:#ec8ea3;--k3:#e3a75c;--k4:#9fd08f;--k5:#c59ed8;--k6:#7cc7b3;--k7:#d9a27e;--k8:#cfd27a;--k9:#f29a77;--k10:#a9a7ff;--k11:#e89ccd;--k12:#7ecbdb;--k13:#d6b98c;--k14:#8cc4ec;--acc:#e0a3d4;--acc-soft:#33202e;--grid:rgba(224,163,212,.06);--hema:#a9a7ff;--eosin:#ff86b2;--ok:#6fd3a0;--ng:#ff9466;--surface:#1a2221;--sunken:#222a2a;}
 .brand .seal{font-size:13px}
@@ -1094,7 +1094,7 @@ function home() {
   </div>
   <details class="panel">
     <summary>このアプリの使い方</summary>
-    <p>① ホームの「ステップ1」から順に解きます。途中でやめても、次に開いたときに<b>続きから</b>再開できます。<br>② 答えると、正解の番号と文、<b>ここだけ読めば大丈夫</b>（1〜3行の要点）、<b>理由と周辺知識</b>、ほかの選択肢が<b>なぜ違うか</b>が出ます。図とまとめ表は「もっと詳しく」の中です。<br>③ 「この問題の評価」で○△×を付けると、忘れかけたころに「今日の復習」に出ます。</p>
+    <p>① ホームの「ステップ1」から順に解きます。途中でやめても、次に開いたときに<b>続きから</b>再開できます。<br>② 答えると、正解の番号と文、<b>ここだけ読めば大丈夫</b>（1〜3行の要点）、<b>理由と周辺知識</b>、ほかの選択肢が<b>なぜ違うか</b>、まとめ表と図が、折りたたまずに全部出ます。<br>③ 「この問題の評価」で○△×を付けると、忘れかけたころに「今日の復習」に出ます。</p>
     <p>試験について：日本リウマチ学会の専門医試験は CBT（コンピュータ）方式の多肢選択式 100問・120分で、合格基準は公表されていません（2025年度の案内）。過去問は公開されていないため、このアプリの問題は、学会の研修項目と国内外のガイドライン・添付文書をもとに<b>すべて自作</b>しています。薬の承認・用量は2026年10月時点の国内の情報です。</p>
   </details>
   <details class="panel">
@@ -1150,7 +1150,7 @@ document.addEventListener("click", e => { const f = e.target.closest(".fig"); if
 /* テーマごとのまとめ表（このテーマで問われる要素を全部並べた表） */
 const mtHtml = q => (q.mt || []).filter(k => MT[k]).map((k, ix) => { const m = MT[k];
   const tb = `<div class="mtlist">${m.r.map(r => `<div class="mtrow"><b>${esc(r[0])}</b>${r.slice(1).map((c, j) => c ? `<div><span class="mth">${esc(m.h[j + 1])}</span>${esc(c)}</div>` : "").join("")}</div>`).join("")}</div>${m.n ? `<p class="mtn">${esc(m.n)}</p>` : ""}`;
-  return `<div class="mtbox"><span class="lbl">まとめ（このテーマで問われることを全部）</span>${ix === 0 ? `<h5>${esc(m.t)}</h5>${tb}` : `<details><summary>${esc(m.t)}</summary>${tb}</details>`}</div>`; }).join("");
+  return `<div class="mtbox"><span class="lbl">まとめ表：${esc(m.t)}</span>${tb}</div>`; }).join("");
 
 function quiz() {
   const q = QI[S.list[S.i]]; const f = FIELDS[q.f]; const answered = S.picked !== null;
@@ -1173,7 +1173,6 @@ function quiz() {
     if (S.i > 0) out += `<div class="qnav"><button class="btn sub" data-act="prev">前の問題へ</button></div>`;
     out += MyNote.slot(q.id) + `</article>`; app.innerHTML = out; return;
   }
-  const hasMore = (q.fig || []).some(k => FIGS[k]) || (q.mt || []).some(k => MT[k]);
   out += `<div class="verdict ${ok ? "ok" : "ng"}" role="status"><span class="big">${ok ? "○" : "×"}</span><div><h3>${ok ? "正解！" : "ざんねん"}</h3><p>正解は「<b>${MK[q.a]}</b>」です</p></div></div>
     <div class="exp">
       <div class="ansbox"><span class="lbl">答え</span><span class="ansno">${MK[q.a]}</span>${esc(q.ch[q.a])}</div>
@@ -1181,10 +1180,8 @@ function quiz() {
       ${eOf(q) ? `<div class="whybox"><span class="lbl">理由と周辺知識</span><div class="body">${nl(eOf(q))}</div></div>` : ""}
       ${q.m ? `<div class="goro"><span class="lbl">覚え方</span>${nl(q.m)}</div>` : ""}
       ${editorHtml(q)}
-      ${hasMore ? `<details class="more"><summary>もっと詳しく：図・まとめ表（読まなくても合格できます）</summary>
-      ${(q.fig || []).filter(k => FIGS[k]).map(svgHtml).join("")}
       ${mtHtml(q)}
-      </details>` : ""}
+      ${(q.fig || []).filter(k => FIGS[k]).map(svgHtml).join("")}
       ${MyNote.slot(q.id)}
     </div>
     ${selfMarkHtml(q.id)}
@@ -1351,11 +1348,11 @@ document.addEventListener("keydown", e => {
 render();
 
 </script>
-<p class="offline">2版（2026年10月13日：外科的治療・リハビリ／医療倫理・医療安全・医療制度の2章を追加（296問）。第1版：初版 278問）</p>
+<p class="offline">3版（2026年10月13日：見た目を皮膚科4択と同じに（解答画面の図・まとめ表を折りたたまずに表示、色をそろえた）。第2版：外科的治療・リハビリ／医療倫理・医療安全・医療制度の2章を追加（296問））</p>
 <p class="offline" id="offline">オフライン利用：準備中…</p>
 <script>
 (function(){
-  var el=document.getElementById("offline"),C="rheum4-v2";
+  var el=document.getElementById("offline"),C="rheum4-v3";
   function ok(){el.innerHTML="オフライン利用：<b>準備OK</b>（電波がなくても使えます）"}
   if(!("serviceWorker" in navigator)){el.textContent="オフライン利用：この環境では使えません";return}
   var had=!!navigator.serviceWorker.controller,reloaded=false;
