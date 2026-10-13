@@ -580,6 +580,28 @@ svg text.S{font-size:15px}
 svg text.red{font-size:16px;fill:var(--maru);font-weight:700}
 .fig.svgfig{padding:8px}
 </style>
+<style>
+/* 図の部品の色（.svgfig の中の SVG に効かせる。ダークモードも CSS 変数で対応） */
+.svgfig svg text{fill:var(--ink);font-family:var(--body)}
+.svgfig svg text.red{fill:var(--maru)}
+.svgfig svg text.acc{fill:var(--acc);font-weight:700}
+.svgfig svg text.mu{fill:var(--muted)}
+.svgfig .gx{fill:var(--line);stroke:none}
+.svgfig .bx{fill:var(--card);stroke:var(--ink);stroke-width:1.4}
+.svgfig .bx2{fill:var(--acc-soft);stroke:var(--acc);stroke-width:1.6}
+.svgfig .bx3{fill:var(--maru-soft);stroke:var(--maru);stroke-width:1.6}
+.svgfig .ln{stroke:var(--ink);stroke-width:1.4;fill:none}
+.svgfig .ln.d{stroke-dasharray:6 5}
+.svgfig .ln.red{stroke:var(--maru);stroke-width:2.2}
+.svgfig .ln.acc{stroke:var(--acc);stroke-width:2.2}
+.svgfig .ln.thick{stroke-width:5}
+.svgfig .dot{fill:var(--maru)}
+.svgfig .ax{fill:var(--acc-soft);stroke:var(--acc);stroke-width:1.6}
+.svgfig .hx{fill:var(--maru-soft);stroke:var(--maru);stroke-width:1.6}
+.svgfig svg text.L{font-size:20px;font-weight:700}
+.svgfig svg text.M{font-size:17px}
+.svgfig svg text.S{font-size:15px}
+</style>
 <body>
 <div class="wrap" id="app"></div>
 <script>
@@ -1348,11 +1370,11 @@ document.addEventListener("keydown", e => {
 render();
 
 </script>
-<p class="offline">3版（2026年10月13日：見た目を皮膚科4択と同じに（解答画面の図・まとめ表を折りたたまずに表示、色をそろえた）。第2版：外科的治療・リハビリ／医療倫理・医療安全・医療制度の2章を追加（296問））</p>
+<p class="offline">4版（2026年10月13日：図の箱・骨などが黒く表示される不具合を修正、見た目を皮膚科4択と同じに（解答画面の折りたたみなし・配色統一）。第2版：外科的治療・リハビリ／医療倫理・医療安全・医療制度の2章を追加（296問））</p>
 <p class="offline" id="offline">オフライン利用：準備中…</p>
 <script>
 (function(){
-  var el=document.getElementById("offline"),C="rheum4-v3";
+  var el=document.getElementById("offline"),C="rheum4-v4";
   function ok(){el.innerHTML="オフライン利用：<b>準備OK</b>（電波がなくても使えます）"}
   if(!("serviceWorker" in navigator)){el.textContent="オフライン利用：この環境では使えません";return}
   var had=!!navigator.serviceWorker.controller,reloaded=false;
